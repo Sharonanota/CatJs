@@ -1,15 +1,15 @@
-var myIndex = 0;
-carousel();
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}
-  x[myIndex-1].style.display = "block"
-}
+// var myIndex = 0;
+// carousel();
+// function carousel() {
+//   var i;
+//   var x = document.getElementsByClassName("mySlides");
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";
+//   }
+//   myIndex++;
+//   if (myIndex > x.length) {myIndex = 1}
+//   x[myIndex-1].style.display = "block"
+// }
   
 function namee() {
  
@@ -25,15 +25,23 @@ function namee() {
 
         console.log("self.name = " + self.name);
 
+        (function(){
+            
+            console.log("this.phoneNumber =" + this.phoneNumber);
+
+            console.log("self.phoneNumber =" + self.phoneNumber);
+        })
+        (function(){
+            console.log("this.location = " + this.location);
+
+            console.log("this.location = " + self.location);
+
+        })
+
     }());
 
 }
-
-
-
-
-
-    var myObject = {
+ var myObject = {
         name: "Adalab",
         func: function() {
             var self = this;
