@@ -11,33 +11,25 @@ function carousel() {
   x[myIndex-1].style.display = "block"
 }
   
-  var customerName = prompt("Please enter your name");
+function namee() {
+ 
+    var self = this;
 
-    if (customerName!= null) {
-    
-        document.getElementsByTagName("section").innerHTML =
-    
-        "Hello " + customerName;
-    
-    }
-    var customerPhone = prompt("Please enter your phone number");
+    console.log("this.name = " + this.name);
 
-    if (customerPhone!= null) {
-    
-        document.getElementsByTagName("section").innerHTML =
-    
-        "Hello " + customerPhone ;
-    
-    }
-    var location = prompt("Please enter your location");
+    console.log("self.name = " + self.name);
 
-    if (location!= null) {
-    
-        document.getElementsByTagName("section").innerHTML =
-    
-        "Hello " + location ;
-    
-    }
+    (function() {
+
+        console.log("this.name = " + this.name);
+
+        console.log("self.name = " + self.name);
+
+    }());
+
+}
+
+
 
 
 
